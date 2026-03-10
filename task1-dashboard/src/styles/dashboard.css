@@ -1,0 +1,224 @@
+/* App background */
+
+.app {
+  background: linear-gradient(135deg, #eef2f7, #f9fbfd);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+/* Layout */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+
+/* Patient Card */
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Header */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.card-header p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+
+/* Condition */
+
+.condition {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+
+/* Urgency badge */
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.normal {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.badge.attention {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.urgent {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+
+/* Progress Pipeline */
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.stage {
+  text-align: center;
+  flex: 1;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.circle.active {
+  background: #22c55e;
+  color: white;
+}
+
+.stage span {
+  font-size: 11px;
+  display: block;
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+
+/* Info section */
+
+.info {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.info p {
+  margin: 4px 0;
+}
+
+
+/* Button */
+
+button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+
+/* Notification Panel */
+
+.notification-panel {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.notification-panel h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+
+/* Timeline */
+
+.event {
+  border-left: 3px solid #d1d5db;
+  padding-left: 12px;
+  margin-bottom: 14px;
+}
+
+.event p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.event span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.event.success {
+  border-color: #22c55e;
+}
+
+.event.alert {
+  border-color: #ef4444;
+}
+
+.event.info {
+  border-color: #3b82f6;
+}
+
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 20px;
+  }
+
+}
